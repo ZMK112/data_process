@@ -1,0 +1,5 @@
+### ReadMe
+data文件：data文件中所存储的是原始数据
+csv文件： csv文件中所存储的是最终处理好的csv文件
+constant.py文件：函数常用的类型，const类在其中声明
+data_process.py:数据处理文件
