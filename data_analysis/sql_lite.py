@@ -14,7 +14,6 @@ def to_sql(data,id):
     # cursor = conn.cursor()
     # cursor.execute('select * from promotion')
     # print(cursor.execute('select * from promotion'))
-
     # results = cursor.fetchall()
     # for row in results:
     #     print(row)

@@ -5,6 +5,7 @@ DROP TABLE IF EXISTS `Business_Reject_Event`;
 
 CREATE TABLE `Business_Reject_Event` (
   `date` date DEFAULT NULL,
+  `invAcctId` int(64) DEFAULT NULL,
   `clSeqNo` varchar(20) DEFAULT NULL,
   `securityId` int(64) DEFAULT NULL,
   `mktId` int(64) DEFAULT NULL,

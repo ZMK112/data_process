@@ -139,7 +139,7 @@ const.HASCOUNTERTRANSFERED = '(?P<hasCounterTransfered>hasCounterTransfered\[(.*
 const.DATA_PART=['Business Reject Event','Order Report Event','Order Insert Event',
                  'Trade Report Event','FundTrsf Report Event']
 
-const.HEADER_BUSINESS_REJECT = ['type', 'date', 'clSeqNo', 'securityId', 'mktId', 'bsType', 'ordType', 'ordQty',
+const.HEADER_BUSINESS_REJECT = ['type', 'date', 'invAcctId','clSeqNo', 'securityId', 'mktId', 'bsType', 'ordType', 'ordQty',
                                 'ordPrice','origClSeqNo','origClOrdId', 'ordReqOrigSendTime', 'ordReqOrigRecvTime',
                                 'ordReqCollectedTime','ordReqActualDealTime','errMsg']
 
@@ -187,7 +187,7 @@ const.HEADER_FOUND_REPORT = ['type', 'date', 'cashAcctId', 'clSeqNo', 'direct',
                              'rejReason', 'counterErrCode', 'allotSerialNo', 'errorInfo', 'hasCounterTransfered']
 
 # # 正则表达式数组
-const.PATTERNS_BUSINESS_REJECT = [const.DATE, const.CLSEQNO, const.SECURITYID, const.MKTID, const.BSTYPE, const.ORDTYPE,
+const.PATTERNS_BUSINESS_REJECT = [const.DATE,const.INVACCTID,const.CLSEQNO, const.SECURITYID, const.MKTID, const.BSTYPE, const.ORDTYPE,
                                   const.ORDQTY,
                                   const.ORDPRICE, const.ORIGCLSEQNO, const.ORIGCLORDID, const.ORDREQORIGSENDTIME,
                                   const.ORDREQORIGRECVTIME,
@@ -248,6 +248,7 @@ const.MATCH_HEADER = [const.HEADER_BUSINESS_REJECT, const.HEADER_ORDER_REPORT, c
 
 const.SQL_TABLE = ['Business_Reject_Event','Order_Report_Event','Order_Insert_Event','Trade_Report_Event','FundTrsf_Report_Event']
 
+
 # file是原始数据位置，to—file为生成csv文件路径
 const.FILE = './data'
 const.TO_FILE = './csv/datass.csv'
@@ -257,3 +258,10 @@ const.FILE_DEPTH = 2
 
 # SQL_lite数据库名称
 const.DB_NAME = 'test.db'
+
+const.TIME_LIMIT = 93010000
+const.CSV_PATH = './csv/'
+
+const.START_TIME = 93000000
+const.END_TIME = 103000000
+const.RATE = 0.85

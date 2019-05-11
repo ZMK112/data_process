@@ -3,7 +3,7 @@ import re
 import sqlite3
 import pandas as pd
 import datetime
-import pysnooper
+# import pysnooper
 from constant import  const
 import  sql_lite as sl
 
@@ -87,9 +87,12 @@ def match(pattern, strs,index): #参数：正则表达式，解析内容，数�
                 string=''.join(value)
                 values.append(string)
             else:
-                values.append(tmp)
+                values.append(tmp[0:8]+tmp[9:11]+tmp[12:14]+tmp[15:])
+                # values.append(tmp)
                 # print(tmp,tmp[0:8]+tmp[9:11]+tmp[12:14]+tmp[15:])
+
     return values
+
 
 '''
 将数据块处理好的数据，生成dict，并生成dataframe格式，生成csv文件
@@ -190,8 +193,8 @@ data_to_sql()或者data_to_csv()两部分函数
 分别将数据导入数据库和csv文件
 '''
 if __name__ == "__main__":
-    # data_to_csv(const.FILE, const.TO_FILE)
-    data_to_sql(const.FILE)
+    data_to_csv(const.FILE, const.TO_FILE)
+    # data_to_sql(const.FILE)
 
 
 
